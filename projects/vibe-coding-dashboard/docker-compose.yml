@@ -1,0 +1,17 @@
+# 30-Day Vibe Coding Dashboard — run on VPS
+# Usage: docker compose up -d
+
+services:
+  dashboard:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_PATH=/data/progress.db
+    volumes:
+      - dashboard-data:/data
+    restart: unless-stopped
+
+volumes:
+  dashboard-data:

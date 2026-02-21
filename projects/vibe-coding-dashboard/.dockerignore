@@ -1,0 +1,30 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# build
+.next
+out
+
+# db (do not bake into image)
+*.db
+data/
+
+# env (set at runtime)
+.env
+.env.local
+.env.*.local
+
+# git
+.git
+.gitignore
+
+# misc
+.DS_Store
+*.pem
+*.md
+!README.md
+
+# docs (optional: keep if you want them in image)
+docs/
